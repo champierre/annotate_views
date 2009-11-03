@@ -1,0 +1,14 @@
+AnnotateViews
+==============
+
+Add a comment identifying own relative path to the top and to the end
+of each view source file:
+
+Author:
+   Junya Ishihara
+   champierre.com
+
+Released under the same license as Ruby. No Support. No Warranty.
+
+Back up your view files before using...
+
