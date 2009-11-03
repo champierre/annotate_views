@@ -27,8 +27,13 @@ module AnnotateViews
 
   def self.annotate(view_file)
     view_file_name = File.join(VIEW_DIR, view_file)
-    annotate_one_file(view_file_name, view_file)
+
+    # Skip mailer or notifier view files.
+    unless view_file =~ /mailer\// || view_file =~ /notifier\//
+      annotate_one_file(view_file_name, view_file)
+    end
   end
+
   def self.get_view_files
     views = []
     Dir.chdir(VIEW_DIR) do
